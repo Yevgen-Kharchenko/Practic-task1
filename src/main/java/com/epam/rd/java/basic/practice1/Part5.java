@@ -11,7 +11,7 @@ public class Part5 {
             sum += num;
 
         }
-        System.out.println(sum);
+        System.out.print(sum);
 
     }
 

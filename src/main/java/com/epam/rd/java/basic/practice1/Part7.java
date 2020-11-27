@@ -3,6 +3,9 @@ package com.epam.rd.java.basic.practice1;
 public class Part7 {
 
     public static void main(String[] args) {
+        str2int(args[0]);
+        int2str(Integer.parseInt(args[1]));
+        rightColumn(args[2]);
 
     }
 
