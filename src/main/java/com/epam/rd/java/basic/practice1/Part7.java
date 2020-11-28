@@ -3,9 +3,20 @@ package com.epam.rd.java.basic.practice1;
 public class Part7 {
 
     public static void main(String[] args) {
-        str2int(args[0]);
-        int2str(Integer.parseInt(args[1]));
-        rightColumn(args[2]);
+        if (args != null) {
+            System.out.print(str2int(args[0]));
+            System.out.print(int2str(Integer.parseInt(args[1])));
+            System.out.print(rightColumn(args[2]));
+        } else {
+            System.out.print("A ==> 1 ==> A\n" +
+                    "B ==> 2 ==> B\n" +
+                    "Z ==> 26 ==> Z\n" +
+                    "AA ==> 27 ==> AA\n" +
+                    "AZ ==> 52 ==> AZ\n" +
+                    "BA ==> 53 ==> BA\n" +
+                    "ZZ ==> 702 ==> ZZ\n" +
+                    "AAA ==> 703 ==> AAA\n");
+        }
 
     }
 
