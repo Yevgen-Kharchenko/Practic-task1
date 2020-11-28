@@ -48,7 +48,6 @@ public class Part7 {
     public static String rightColumn(String number) {
         int num = str2int(number);
         num++;
-        String string = int2str(num);
-        return string;
+        return int2str(num);
     }
 }

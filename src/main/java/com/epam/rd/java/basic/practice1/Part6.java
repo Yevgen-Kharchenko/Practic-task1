@@ -8,19 +8,23 @@ public class Part6 {
         if (n != 0) {
             int[] array = new int[n];
             array[0] = 2;
-            for (int i = 1; i < n; i++) {
-                array[i] = 2 * (i + 1) - 1;
+            int count = 1;
+            int num = 3;
+            while (count < n) {
+                if (isPrime(num)) {
+                    array[count] = num;
+                    count++;
+                }
+                num++;
             }
+
             int iMax = array.length - 1;
-            if (iMax == -1) {
-                System.out.print("[]");
-            }
             StringBuilder b = new StringBuilder();
-            b.append('[');
+
             for (int i = 0; i < array.length; i++) {
                 b.append(array[i]);
                 if (i == iMax) {
-                    System.out.print(b.append(']').toString());
+                    System.out.print(b.toString());
                 }
                 b.append(" ");
             }
@@ -29,4 +33,13 @@ public class Part6 {
 
     }
 
+    private static boolean isPrime(int n) {
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
+
